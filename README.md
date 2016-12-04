@@ -1,26 +1,26 @@
-# Phobos
+# velocity-react-cljs
 
-A ClojureScript wrapper to use Velocity React in Reagent apps. With Phobos you can easily add transitions to your UI.
+A ClojureScript wrapper for using velocity-react in Reagent apps. This is a fork of [velocity-react-cljs](http://clojars.org/velocity-react-cljs).
 
-[![Clojars Project](http://clojars.org/phobos/latest-version.svg)](http://clojars.org/phobos)
+[![Clojars Project](http://clojars.org/velocity-react-cljs/latest-version.svg)](http://clojars.org/velocity-react-cljs)
 
 
 ## Demo
 
-See at [http://andreloureiro.github.io/phobos](http://andreloureiro.github.io/phobos)
+See at [http://dive-networks.github.io/velocity-react-cljs](http://dive-networks.github.io/velocity-react-cljs)
 
 
 ## Usage
 
-First, some attention to your project dependencies. Phobos depends on `cljsjs/react-with-addons` because of the `TransitionGroup` component, so the developer is responsible to choose the React version needed to the project. One should exclude the `cljsjs/react` dependency from `reagent`, and add the proper `cljsjs/react-with-addons` version:
+First, some attention to your project dependencies. velocity-react-cljs depends on `cljsjs/react-with-addons` because of the `TransitionGroup` component. The developer is responsible to choose the React version needed to the project. One should exclude the `cljsjs/react` dependency from `reagent`, and add the proper `cljsjs/react-with-addons` version:
 
 ```clj
-  [reagent "0.6.0-alpha" :exclusions [cljsjs/react]]
-  [cljsjs/react-with-addons "15.0.1-1"]
-  [phobos "0.1.0-SNAPSHOT"]
+  [reagent "0.6.0" :exclusions [cljsjs/react]]
+  [cljsjs/react-with-addons "15.3.1-0"]
+  [velocity-react-cljs "0.1.0-SNAPSHOT"]
 ```
 
-Phobos has 2 components: `motion-component` and `motion-group`. Both accepts a map with configs as its first argument, and the child component our collection of components as its second argument.
+velocity-react-cljs has 2 components: `motion-component` and `motion-group`. Both accepts a map with configs as its first argument, and the child component our collection of components as its second argument.
 
 ### `motion-component`
 
@@ -47,7 +47,7 @@ As with `motion-component`, other properties like `component`, `class-name`, etc
 
 For the transitions, you have two options: Ready-to-use Velocity pre-registered UI Pack effects, or create your own.
 
-If you go with the later, you can use a function `register-effect` provided by Phobos. You can define a custom Velocity UI Pack effect to use with the `animation` property of both `motion-component` and `motion-group` components. You have some advantages over declaring your animations as style hashes, like animation chaining. You can get more information in the [Velocity UI Pack](http://julian.com/research/velocity/#uiPack) section of Velocity.js site.
+If you go with the later, you can use a function `register-effect` provided by velocity-react-cljs. You can define a custom Velocity UI Pack effect to use with the `animation` property of both `motion-component` and `motion-group` components. You have some advantages over declaring your animations as style hashes, like animation chaining. You can get more information in the [Velocity UI Pack](http://julian.com/research/velocity/#uiPack) section of Velocity.js site.
 
 But if the provided pre-registered animations are enough for you to achieve what you need, you can check the available effects [here](https://github.com/julianshapiro/velocity/blob/master/velocity.ui.js#L224).
 
@@ -59,6 +59,7 @@ All credits go to the people from the [Velocity React](https://github.com/twitte
 
 ## License
 
-Copyright © 2016 Andre Loureiro
+Original work Copyright © 2016 Andre Loureiro
+Modified work Copyright © 2016 Dive Networks
 
 Licensed under the MIT License: https://opensource.org/licenses/MIT
