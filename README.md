@@ -1,14 +1,8 @@
 # velocity-react-cljs
 
-A ClojureScript wrapper for using velocity-react in Reagent apps. This is a fork of [velocity-react-cljs](http://clojars.org/velocity-react-cljs).
+A ClojureScript wrapper for using velocity-react in Reagent apps. This is a fork of [Phobos](https://github.com/andreloureiro/phobos).
 
 [![Clojars Project](http://clojars.org/velocity-react-cljs/latest-version.svg)](http://clojars.org/velocity-react-cljs)
-
-
-## Demo
-
-See at [http://dive-networks.github.io/velocity-react-cljs](http://dive-networks.github.io/velocity-react-cljs)
-
 
 ## Usage
 
@@ -17,7 +11,7 @@ First, some attention to your project dependencies. velocity-react-cljs depends 
 ```clj
   [reagent "0.6.0" :exclusions [cljsjs/react]]
   [cljsjs/react-with-addons "15.3.1-0"]
-  [velocity-react-cljs "0.1.0-SNAPSHOT"]
+  [velocity-react-cljs "0.1.0-0"]
 ```
 
 velocity-react-cljs has 2 components: `motion-component` and `motion-group`. Both accepts a map with configs as its first argument, and the child component our collection of components as its second argument.
@@ -54,8 +48,7 @@ But if the provided pre-registered animations are enough for you to achieve what
 
 ## Credits
 
-All credits go to the people from the [Velocity React](https://github.com/twitter-fabric/velocity-react) library for its amazing work.
-
+Credits go to the creators of [Velocity React](https://github.com/twitter-fabric/velocity-react) and to Andre Loureiro for creating  [Phobos](https://github.com/andreloureiro/phobos), the parent of this fork.
 
 ## License
 
