@@ -8,8 +8,7 @@
 
 (def ^:private VelocityReact js/VelocityReact)
 (def ^:private VelocityComponent (aget VelocityReact "VelocityComponent"))
-(def ^:private VelocityTransitionGroup (aget VelocityReact
-                                             "VelocityTransitionGroup"))
+(def ^:private VelocityTransitionGroup (aget VelocityReact "VelocityTransitionGroup"))
 (def ^:private velocityHelpers (aget VelocityReact "velocityHelpers"))
 
 (defn register-effect [config]
@@ -37,14 +36,14 @@
   (let [child {:children (r/as-element children)}
         props (clj->js (merge (u/camelcase-map config) child))]
     (cond
-      (and (seq? config)
+      (and (coll? config)
            (nil? children))
       (u/throw-err (u/error-messages :config-nil-to-group))
 
       (nil? children)
       (u/throw-err (u/error-messages :nil-children-to-group))
 
-      (not (seq? children))
+      (not (coll? children))
       (u/throw-err (u/error-messages :children-not-collection) children)
 
       :else
