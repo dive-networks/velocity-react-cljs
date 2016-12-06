@@ -1,4 +1,4 @@
-(def +version+ "0.1.0-0")
+(def +version+ "0.1.0-1")
 (def +project+ 'velocity-react-cljs)
 
 (set-env!
