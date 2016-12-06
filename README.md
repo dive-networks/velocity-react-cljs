@@ -4,9 +4,21 @@ A ClojureScript wrapper for using velocity-react in Reagent apps. This is a fork
 
 [![Clojars Project](http://clojars.org/velocity-react-cljs/latest-version.svg)](http://clojars.org/velocity-react-cljs)
 
+## Installing
+
+The project has been configured to package the minified versions of the VelocityJS and velcity-react source files. You can change that behaviour by editing `src/deps.clj`. The foreign libs are generated in [dive-networks/velocity-react](https://github.com/dive-networks/velocity-react/) which is a fork of the original [velocity-react](https://github.com/twitter-fabric/velocity-react) project. We're using the fork in order to expose a `window.VelocityReact` object and to not include the React and ReactDOM source code in the compiled files. You can use any method you want to obtain the JavaScript dependencies. Just place them in `libs` and update the `src/deps.clj` file if the version numbers changed.
+
+## Installing Locally
+
+Run `boot deploy-local`
+
+## Deploying to Clojars
+
+Run `boot deploy`
+
 ## Usage
 
-First, some attention to your project dependencies. velocity-react-cljs depends on `cljsjs/react-with-addons` because of the `TransitionGroup` component. The developer is responsible to choose the React version needed to the project. One should exclude the `cljsjs/react` dependency from `reagent`, and add the proper `cljsjs/react-with-addons` version:
+First, some attention to your project dependencies. velocity-react-cljs depends on `Reagent` and `cljsjs/react-with-addons` because of the `TransitionGroup` component. You're responsible for choosing the React version needed for your project. You should exclude the `cljsjs/react` dependency from `reagent`, and then add the proper `cljsjs/react-with-addons` version:
 
 ```clj
   [reagent "0.6.0" :exclusions [cljsjs/react]]
@@ -14,13 +26,13 @@ First, some attention to your project dependencies. velocity-react-cljs depends 
   [velocity-react-cljs "0.1.0-0"]
 ```
 
-velocity-react-cljs has 2 components: `motion-component` and `motion-group`. Both accepts a map with configs as its first argument, and the child component our collection of components as its second argument.
+velocity-react-cljs has 2 components: `motion-component` and `motion-group`. Both accept a config map the first argument, and a child component or collection of components as its second argument.
 
 ### `motion-component`
 
-If you need to animate one component, you should go with `motion-component`. It accepts the following properties:
+Component to add Velocity animations to a child node or one or more of its descendants. Wraps the `VelocityComponent` component. It accepts the following properties:
 
-* `animation`: Animation config
+* `animation`: Velocity animation config. This is passed to Velocity as is. If this property changes, the component applies the new animation to the child on the next tick.
 * `target-query-selector`: Used to animate a descendant of the child component.
 * `run-on-mount`: Run the animation when the component is mounted.
 
