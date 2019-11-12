@@ -1,6 +1,6 @@
-(ns phobos.components.custom-animation
+(ns velocity-react-cljs.components.custom-animation
   (:require [reagent.core :as r]
-            [phobos.core :as p]))
+            [velocity-react-cljs.core :as p]))
 
 
 (def heart-animation

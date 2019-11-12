@@ -1,6 +1,6 @@
-(ns phobos.components.custom-transition
+(ns velocity-react-cljs.components.custom-transition
   (:require [reagent.core :as r]
-            [phobos.core :as p]))
+            [velocity-react-cljs.core :as p]))
 
 
 (def soccer-teams

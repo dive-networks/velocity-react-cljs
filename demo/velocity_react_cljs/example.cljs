@@ -1,11 +1,11 @@
-(ns phobos.example
-  (:require [phobos.components.toggle-box :refer [toggle-box]]
-            [phobos.components.square-list :refer [square-list]]
-            [phobos.components.custom-animation :refer [custom-animation]]
-            [phobos.components.custom-transition :refer [custom-transition]]
+(ns velocity-react-cljs.example
+  (:require [velocity-react-cljs.components.toggle-box :refer [toggle-box]]
+            [velocity-react-cljs.components.square-list :refer [square-list]]
+            [velocity-react-cljs.components.custom-animation :refer [custom-animation]]
+            [velocity-react-cljs.components.custom-transition :refer [custom-transition]]
             [reagent.core :as r]
             [goog.dom :as d]
-            [phobos.core :as p]))
+            [velocity-react-cljs.core :as p]))
 
 
 (enable-console-print!)
@@ -34,7 +34,7 @@
   (let [state (r/atom 0)]
     (fn []
       [:div.main
-       [:h1.title "Phobos Examples"]
+       [:h1.title "velocity-react-cljs Examples"]
        [:ul.nav
         (doall
          (for [{:keys [id title]} nav-items]

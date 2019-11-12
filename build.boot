@@ -63,7 +63,7 @@
   (comp (serve :dir "static")
         (watch)
         (speak)
-        (reload :on-jsload 'phobos.example/mount!)
+        (reload :on-jsload 'velocity-react-cljs.example/mount!)
         (cljs-repl)
         (cljs :compiler-options {:closure-defines {"goog.DEBUG" false}
                                  :source-map :true
@@ -82,7 +82,7 @@
   (merge-env! :dependencies react-with-addons)
   (cljs :optimizations :advanced
         :compiler-options {:foreign-libs foreign-libs
-                           :externs ["externs/phobos_externs.js"]
+                           :externs ["externs/velocity_react.ext.js"]
                            :closure-warnings {:externs-validation :off}}))
 
 (deftask demo []

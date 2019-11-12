@@ -1,6 +1,6 @@
-(ns phobos.components.toggle-box
+(ns velocity-react-cljs.components.toggle-box
   (:require [reagent.core :as r]
-            [phobos.core :as p]))
+            [velocity-react-cljs.core :as p]))
 
 
 (def transition-list

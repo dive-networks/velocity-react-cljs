@@ -1,7 +1,7 @@
-(ns phobos.components.square-list
+(ns velocity-react-cljs.components.square-list
   (:require-macros [cljs.core.async.macros :refer [go-loop]])
   (:require [reagent.core :as r]
-            [phobos.core :as p]
+            [velocity-react-cljs.core :as p]
             [cljs.core.async :refer [<! timeout]]))
 
 
