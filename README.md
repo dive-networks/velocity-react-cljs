@@ -64,8 +64,8 @@ Credits go to the creators of [Velocity React](https://github.com/twitter-fabric
 
 ## License
 
-Original work Copyright © 2016 Andre Loureiro
-Modified work Copyright © 2016 Dive Networks
+Original work Copyright © 2016 Andre Loureiro  
+Modified work Copyright © 2016 Dive Networks  
 Modified work Copyright © 2019 Dive Networks
 
 Licensed under the MIT License: https://opensource.org/licenses/MIT
