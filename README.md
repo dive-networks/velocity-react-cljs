@@ -18,12 +18,12 @@ Run `boot deploy`
 
 ## Usage
 
-First, some attention to your project dependencies. velocity-react-cljs depends on `Reagent` and `cljsjs/react-with-addons` because of the `TransitionGroup` component. You're responsible for choosing the React version needed for your project. You should exclude the `cljsjs/react` dependency from `reagent`, and then add the proper `cljsjs/react-with-addons` version:
+First, some attention to your project dependencies. velocity-react-cljs depends on `Reagent` and `cljsjs/react-transition-group` because of the `TransitionGroup` component. You're responsible for choosing the React version needed for your project. You should exclude the `cljsjs/react` dependency from `reagent`, and then add the proper `cljsjs/react-transition-group` version:
 
 ```clj
-  [reagent "0.6.0" :exclusions [cljsjs/react]]
-  [cljsjs/react-with-addons "15.3.1-0"]
-  [velocity-react-cljs "0.1.0-0"]
+  [reagent "0.8.1" :exclusions [cljsjs/react]]
+  [cljsjs/react-transition-group "4.3.0-0"]
+  [velocity-react-cljs "0.2.0"]
 ```
 
 velocity-react-cljs has 2 components: `motion-component` and `motion-group`. Both accept a config map the first argument, and a child component or collection of components as its second argument.
@@ -66,5 +66,6 @@ Credits go to the creators of [Velocity React](https://github.com/twitter-fabric
 
 Original work Copyright © 2016 Andre Loureiro
 Modified work Copyright © 2016 Dive Networks
+Modified work Copyright © 2019 Dive Networks
 
 Licensed under the MIT License: https://opensource.org/licenses/MIT
